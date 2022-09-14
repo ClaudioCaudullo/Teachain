@@ -1,0 +1,29 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.heroButtons{
+    margin-top: 4px;
+    overflow:hidden;
+}
+
+.link{
+    margin: (1, 1.5);
+    text-decoration:none !important;
+}
+
+
+.heroContent{
+    height: 90vh;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    align-content: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+

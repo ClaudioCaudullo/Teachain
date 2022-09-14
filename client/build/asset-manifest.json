@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0d2b441e.css",
+    "main.js": "/static/js/main.5bbddc20.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/provacaricamento2.gif": "/static/media/provacaricamento2.26cb3c388d830dca12fd.gif",
+    "static/media/videocall3.jpg": "/static/media/videocall3.434da6383b6359847cc5.jpg",
+    "static/media/finale.jpg": "/static/media/finale.baff85840646e9d42c9b.jpg",
+    "static/media/prova2.jpg": "/static/media/prova2.a9a44626047025254ddf.jpg",
+    "static/media/prof2.jpeg": "/static/media/prof2.c1600d586ef8b1fc3907.jpeg",
+    "static/media/decentralizzazione-transformed.jpeg": "/static/media/decentralizzazione-transformed.d27a9bc92549481588db.jpeg",
+    "static/media/prova3.jpg": "/static/media/prova3.bcaddf68dc471334162c.jpg",
+    "static/media/prof3.jpg": "/static/media/prof3.fd6453f2c9051cec766f.jpg",
+    "static/media/prof1.jpg": "/static/media/prof1.aabc70f750e8d7f2712d.jpg",
+    "static/media/metamaskpayment.png": "/static/media/metamaskpayment.d70a07999b953587f178.png",
+    "static/media/videocall2.jpg": "/static/media/videocall2.2a0cf4a9cf40aef262b3.jpg",
+    "static/media/prova4.png": "/static/media/prova4.a3bca52b48b13b9f86c3.png",
+    "static/media/videocall1.jpeg": "/static/media/videocall1.f4ec4ba58b8c6567cfda.jpeg",
+    "index.html": "/index.html",
+    "main.0d2b441e.css.map": "/static/css/main.0d2b441e.css.map",
+    "main.5bbddc20.js.map": "/static/js/main.5bbddc20.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d2b441e.css",
+    "static/js/main.5bbddc20.js"
+  ]
+}

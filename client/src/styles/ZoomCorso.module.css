@@ -1,0 +1,190 @@
+.container {
+    max-width: 1250px;
+    margin: 30px auto 30px;
+    padding: 0 !important;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+  }
+ .banner{
+    height: 350px; 
+    width:100%;
+
+    object-fit: cover;
+}
+
+@media (max-width:800px) {
+    header {
+        banner: 150px;
+    } 
+    
+    header i {
+        banner: -90%;
+    }
+  }
+
+.main {
+    padding: 20px 20px 0px 20px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.titolo{
+    font-size: 1.875rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.descrizione{
+    font-size:1.25rem;
+    font-weight: normal !important;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+justify-content: space-around;
+font-size:1.875rem;
+
+}
+
+.buttonCompra{
+    background-color: #EF233C !important;
+    width: auto !important;
+    padding:10px;
+    border: none !important;
+    border-radius: 10px !important;
+    color:#EDF2F4;
+    align-self: center;
+    margin-bottom:10px !important;
+
+}
+
+.riga{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.riga>p{
+margin-bottom:24px !important;
+}
+
+.prezzo{
+    min-width:300px !important;
+    max-width: 33% !important;
+
+}
+
+.materia{
+    max-width: 33%;
+    min-width:150px;
+    color:white !important; 
+}
+
+.secondaria {
+    max-width: 33%;
+    min-width:150px;
+    color:white !important; 
+
+}
+
+.rounded{
+    border:none;
+    border-radius:30px !important;
+}
+
+.btnModifica{
+    background-color: #4091C9 !important;
+    padding:10px;
+    border: none !important;
+    border-radius: 10px !important;
+    width: 150px !important;
+    color:#EDF2F4;
+    align-self: center;
+}
+
+.btnElimina{
+    background-color: #EF233C !important;
+    padding:10px;
+    border: none !important;
+    border-radius: 10px !important;
+    width: 150px !important;
+    color:#EDF2F4;
+    align-self: center;
+}
+
+.btnConfermaModifica{
+    background-color: #4091C9 !important;
+    color:#EDF2F4;
+}
+
+.btnConfermaElimina{
+    background-color: #EF233C !important;
+    color:#EDF2F4;
+
+}
+
+.durata{
+    max-width: 300px !important;
+    min-width: 150px !important;
+
+}
+
+.creatore{
+    max-width: 300px !important;
+    min-width: 150px!important;
+}
+
+.creatore:hover{
+    cursor: pointer;
+}
+
+.containerAcquirenti{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.bottoniSecondari{
+    padding:10px;
+    border: none !important;
+    border-radius: 10px !important;
+    width: auto !important;
+    color:#EDF2F4;
+    align-self: center;
+    margin-bottom: 10px;
+    background-color: #F26A4F;
+  } 
+
+  a{
+    text-decoration: none;
+
+  }
+
+  .bottoni{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .noStyle{
+    display: flex !important;
+    gap:10px !important;
+    max-width: 400px !important;
+    flex-wrap: wrap !important;
+    margin: 10px 10px 10px 0px;
+
+  }
+
+  .btnSpettatore{
+    background-color: #4091C9 !important;
+    padding:10px;
+    border: none !important;
+    border-radius: 10px !important;
+    width: 250px !important;
+    color:#EDF2F4;
+    align-self: center;
+  }

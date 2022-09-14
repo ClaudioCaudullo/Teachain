@@ -1,0 +1,52 @@
+.buttonAccedi{
+    color: white;
+    background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
+    border: 3px solid #dbdbdb;
+    border-radius: 10px;
+    border-width: 3px;
+    cursor: pointer;
+}
+
+.buttonMetamask{
+    color: white ;
+    background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
+    background-size: 200% 200%;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-right:10px;
+}
+
+.buttonMetamask:hover , .buttonAccedi{
+    background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
+  }
+
+.container{
+    display:flex;
+}
+
+.container>img{
+    width:50px;
+    height:50px;
+}
+
+.container>p{
+margin-bottom:0 !important;    
+margin-top:10px !important;
+}
+
+.linkDisabilitato{
+    text-decoration: none;
+}
+
+.navbarCustom{
+    background-color:#1368AA;
+}
+
+.container>a{
+    color:#2B2D42;
+}

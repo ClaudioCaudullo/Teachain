@@ -1,0 +1,10 @@
+.container{
+    display:flex;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.container>div{
+    margin:5px;
+}
+
