@@ -727,3 +727,21 @@ banner>img:hover{
     }
   }
 
+  @media only screen and (max-width: 850px),(max-height: 500px) {
+    .immagineCarosello{
+      height:500px !important;
+      object-fit:fill !important;
+      object-position:0 60% !important;
+    }
+  }
+
+
+  @media only screen and (min-width: 850px),(min-height: 500px) {
+    .immagineCarosello{
+      height:500px !important;
+      object-fit:cover !important;
+      object-position:0 60% !important;
+    }
+  }
+
+

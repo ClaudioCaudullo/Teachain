@@ -36,6 +36,7 @@ const Home = () => {
     const[username,setUsername]=useState("");
     const[email,setEmail]=useState("");
     const[image,setImage]=useState("");
+    const[bound,setBound]=useState(1);
     const[sfondo,setSfondo]=useState("");
     const[descrizione,setDescrizione]=useState("");
     const[alertTextCustom,setAlertTextCustom]=useState("");
@@ -60,7 +61,7 @@ const Home = () => {
         },
     });
     
-      const [value, setValue] = React.useState(50);
+      const [value, setValue] = React.useState(0);
     
       const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -113,8 +114,10 @@ const Home = () => {
     },[corsi])
 
     useEffect(()=>{
+      if(Object.keys(corsiCopia).length === 0) return;
       let max=0,min=99999999;
-      if(corsiCopia){
+      if(corsiCopia && bound==1){
+        console.log("i corsi",corsiCopia)
         corsiCopia.map((corso)=>{
           if(!corso) return
           if(corso.content.prezzo>max) max=corso.content.prezzo
@@ -122,9 +125,14 @@ const Home = () => {
         })
         setMaxPrezzo(max)
         setMinPrezzo(min)
+        setBound(0)
       }
 
     },[corsiCopia])
+
+    useEffect(()=>{
+        setValue(maxPrezzo)
+    },[maxPrezzo])
 
 
     useEffect(() => {
@@ -409,28 +417,23 @@ const Home = () => {
 
       <Carousel.Item>
         <img
-          className="d-block w-100 h-10"
+          className={`d-block w-100 h-10 ${styles.immagineCarosello}`}
           src={require("../images/prova2.jpg")}
-          style={{height:'500px',objectFit:"cover",objectPosition:"0 60%"}}
-
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          style={{height:'500px',objectFit:"cover",objectPosition:"0 60%"}}
+          className={`d-block w-100 h-10 ${styles.immagineCarosello}`}
           src={require("../images/prova3.jpg")}
           alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-10"
+          className={`d-block w-100 h-10 ${styles.immagineCarosello}`}
           src={require("../images/prova4.png")}
           alt="Third slide"
-          style={{height:'500px',objectFit:"cover",objectPosition:"0 60%"}}
-
         />
 
       </Carousel.Item>
@@ -499,7 +502,7 @@ const Home = () => {
                             </div>
                             <label>💶Prezzo massimo:</label>
                             <div className={styles.slidecontainer}>
-                              <RangeSlider min={minPrezzo} max={maxPrezzo} value={value} className={styles.slider} id="myRange" onChange={(event) => handleChange(event, event.currentTarget.value)} />
+                              <RangeSlider min={minPrezzo}  tooltipPlacement='top' tooltip='on' max={maxPrezzo} value={value} className={styles.slider} id="myRange" onChange={(event) => handleChange(event, event.currentTarget.value)} />
                             </div>
                             <div className={styles.bottoni}>
                               <button className={styles.azzera} onClick={() => azzeraFiltri()}>Azzera</button>
