@@ -1,6 +1,9 @@
 /node_modules
-./client/node_modules
+/client/node_modules
 /package-lock.json
-./client/package-lock.json
-./smart_contract/node_modules
-./smart_contract/package-lock.json
+/client/package-lock.json
+/smart_contract/node_modules
+/smart_contract/package-lock.json
+/node_modules1/
+/client/node_modules1/
+/smart_contract/node_modules1/

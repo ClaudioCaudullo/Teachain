@@ -19,17 +19,20 @@ import 'bootstrap/dist/css/bootstrap.css'; // or include from a CDN
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import { Carousel } from 'react-bootstrap';
+import {Buffer} from 'buffer';
 
 const Home = () => {
 
-    let {corsi,currentAccount,isConnected,isLoading,showErrorInHome,alertText,apriModaleRegistrazione,setApriModaleRegistrazione,setUserDetails,onDisconnect }=useContext(MainContext);
+    let {corsi,currentAccount,isConnected,isLoading,showErrorInHome,alertText,apriModaleRegistrazione,setApriModaleRegistrazione,onDisconnect,setHash,contractUserDetails }=useContext(MainContext);
     const [alert,setAlert]=useState("false");
     const [showTopBtn, setShowTopBtn] = useState(false);
     const [parolaChiave,setParolaChiave]=useState("");
     const [filtroMateria,setFiltroMateria]=useState("");
     const [corsiCopia,setCorsiCopia]=useState(corsi);
     const [maxPrezzo,setMaxPrezzo]=useState(0);
+    const [userDetails,setUserDetails]=useState("");
     const [minPrezzo,setMinPrezzo]=useState(0);
+    const [caricamentoHome,setCaricamentoHome]=useState(false);
     const[username,setUsername]=useState("");
     const[email,setEmail]=useState("");
     const[image,setImage]=useState("");
@@ -42,7 +45,20 @@ const Home = () => {
     const[sfondoDataURL,setSfondoDataURL]=useState(defaultSfondo);
 
     const imageMimeType = /image\/(png|jpg|jpeg)/i;
-
+    const projectId = '2DJBRuSe2FV6WmWXCNkgDEVjeZ6';   // <---------- your Infura Project ID
+    
+    const projectSecret = '07885af6bec7df195a06e71cd0fb1126';  // <---------- your Infura Secret
+    // (for security concerns, consider saving these values in .env files)
+    const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+  
+    const client = ipfsHttpClient({
+        host: 'ipfs.infura.io',
+        port: 5001,
+        protocol: 'https',
+        headers: {
+            authorization: auth,
+        },
+    });
     
       const [value, setValue] = React.useState(50);
     
@@ -266,6 +282,44 @@ const Home = () => {
     handleCloseModal()
   }
 
+  useEffect(()=>{
+     uploadUserDetails();
+  },[userDetails])
+
+  const uploadUserDetails = async () => {
+    if (!userDetails) return
+    setCaricamentoHome(true)
+    let hash
+    try {
+        let options={
+          warpWithDirectory:true,
+        }
+        const result = await client.add(JSON.stringify({ userDetails }),options)
+        hash = result.path
+    } catch (error) {
+      setAlertTextCustom("Registrazione fallita: ",error.code)
+      setShow(true)
+      setCaricamentoHome(false)
+
+      return;
+    }
+    await(await contractUserDetails.addUtente(currentAccount,userDetails.username,userDetails.email,hash)
+    .catch(
+      (error)=>{
+        setAlertTextCustom("Registrazione fallita: ",error.code)
+        setShow(true)
+        setCaricamentoHome(false)
+        return;
+      }
+    )
+    ).wait()
+    setShow(true)
+    setAlertTextCustom("Registrazione effettuata con successo!!")
+    setApriModaleRegistrazione(false)
+    setHash(hash)
+    setCaricamentoHome(false)
+  }
+
   function salvaDati()
   {
     if(!username || !email || !currentAccount) 
@@ -276,9 +330,17 @@ const Home = () => {
       return;
     }
 
+    if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email))
+      {
+        setAlertTextCustom("Inserisci un email valida!")
+        setSeverity("warning");
+        setOpenAlertCustom(true)
+        return;
+      }  
+
         const dettagli={id:currentAccount,username:username,email:email,img:imageDataURL,sfondo:sfondoDataURL,descrizione:descrizione};
       setUserDetails(dettagli)
-
+      setShow(false)
             
   }
 
@@ -318,7 +380,7 @@ const Home = () => {
           <Button variant="secondary" onClick={()=>disconnetti()}>
             Rifiuta
           </Button>
-          <Button variant="primary" onClick={()=>{salvaDati();setShow(false)}}>
+          <Button variant="primary" onClick={()=>{salvaDati()}}>
             Conferma
           </Button>
         </Modal.Footer>
@@ -378,7 +440,7 @@ const Home = () => {
    <input className='form-control mb-4' type="text" placeholder="inserisci un titolo,nome utente,descrizione" value={parolaChiave} onChange={(event) => setParolaChiave(event.currentTarget.value)} />    
 </div>
             </banner><container>
-                {isLoading == true ? (
+                {isLoading == true || caricamentoHome==true ? (
                   <Loader chiamante="home" />
                 ) : (<></>)}
 

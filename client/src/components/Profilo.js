@@ -7,6 +7,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { ethers } from "ethers";
 
 import { Pagination } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -89,7 +90,7 @@ function CustomToggle({ children, eventKey }) {
 
 const Profilo2 = () => {
 
-  let {isConnected,caricaDatiUtenteEsterno,currentAccount,corsiUtente,loadCorsiUtente,loadRecensioniUtente,contractRecensioni,recensioni,contractUserDetails,setImmagineProfilo }=useContext(MainContext);
+  let {isConnected,caricaDatiUtenteEsterno,setHash,loadCorsi,currentAccount,corsiUtente,loadCorsiUtente,loadRecensioniUtente,contractRecensioni,recensioni,contractUserDetails,setImmagineProfilo }=useContext(MainContext);
 
   const [voto, setVoto] = useState(2);
   const [value, setValue] = useState(0);
@@ -106,7 +107,7 @@ const Profilo2 = () => {
   const [userDetails,setUserDetails]=useState("");
   const [username,setUsername]=useState("");
   const [email,setEmail]=useState("");
-  const [hash,setHash]=useState("");
+  const [hash,setHashProfilo]=useState("");
   const [newUsername,setNewUsername]=useState("")
   const [newEmail,setNewEmail]=useState("")
   const [newDescrizione,setNewDescrizione]=useState("")
@@ -212,8 +213,9 @@ const localizer = dateFnsLocalizer({
 
   }
 
+ 
+
   const uploadCambimentiProfilo = async () => {
-     
 
     if (!userDetails) return
     setCaricamento("true")
@@ -226,8 +228,12 @@ const localizer = dateFnsLocalizer({
         }
         const result = await client.add(JSON.stringify({ userDetails }),options)
         hash2 = result.path
-        if(hash2==hash) return
-    } catch (error) {
+        if(hash2==hash) 
+        {
+          setCaricamento("false")
+          return
+        }
+        } catch (error) {
       setAlertText("ipfs image upload error: ",error)
       setOpen(true)
       setSeverity("error")
@@ -244,13 +250,14 @@ const localizer = dateFnsLocalizer({
       setOpen(true)
       setSeverity("success")
       setCaricamento("false")
-    let dettagli= await contractUserDetails.getUtente(currentAccount)
+    await contractUserDetails.getUtente(currentAccount)
     setUsername(newUsername)
     setNewUsername(newUsername)
     setEmail(newEmail)
     setNewEmail(newEmail)
     setDescrizione(newDescrizione)
     setNewDescrizione(newDescrizione)
+    setHashProfilo(hash2)
     setHash(hash2)
     if(flipSfondo && fileSfondo)setImmagineSfondo(fileSfondoURL)
     if(flipImage && fileImage){
@@ -340,7 +347,7 @@ useEffect(()=>{
       setNewUsername(risposta.userDetails.username)
       setEmail(risposta.userDetails.email)
       setNewEmail(risposta.userDetails.email)
-      setHash(hashUtenteEsterno)
+      setHashProfilo(hashUtenteEsterno)
       if(risposta.userDetails.disponibilita){
         risposta.userDetails.disponibilita.map((bo)=>{
             if(max<bo.id) max=bo.id
@@ -360,7 +367,7 @@ useEffect(()=>{
         setNewUsername(username)
         setEmail("Nessun utente con questo id")
         setNewEmail(email)
-        setHash("Nessun utente con questo hash")
+        setHashProfilo("Nessun utente con questo hash")
         setCaricamento("false")
         setDescrizione("Nessun utente con questo id")
         setNewDescrizione("Nessun utente con questo id")
@@ -378,7 +385,7 @@ useEffect(()=>{
         setNewEmail(email)
         setDescrizione("Nessun utente con questo id")
         setNewDescrizione("Nessun utente con questo id")
-        setHash("Nessun utente con questo hash")
+        setHashProfilo("Nessun utente con questo hash")
         setAlertText("ipfs image upload error: ",error)
         setOpen(true)
         setSeverity("error")
@@ -397,7 +404,6 @@ useEffect(()=>{
     /*Selected files data can be collected here.*/
     const file = e.target.files[0];
     if (!file.type.match(imageMimeType)) {
-      console.log("Image mime type is not valid");
       return;
     }
     setFileImage(file);
@@ -519,6 +525,15 @@ useEffect(()=>{
         setCaricamento("false")
         return;
       }
+
+      if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(newEmail))
+      {
+        setAlertText("Inserisci un email valida!")
+        setOpen(true)
+        setSeverity("warning")
+        setCaricamento("false")
+        return;
+      }      
       let newProfile={id:currentAccount,username:username,email:newEmail,img:immagineProfiloLocale,sfondo:immagineSfondo,descrizione:descrizione,disponibilita:allEvents}
       setUserDetails(newProfile)
     }
@@ -736,12 +751,14 @@ useEffect(()=>{
     
 
     useEffect(()=>{
+      
       const fetchData=async()=>{
          
 
         await uploadCambimentiProfilo();
 
       }
+  
       if(userDetails) fetchData();
     },[userDetails])
   return (

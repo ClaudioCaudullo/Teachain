@@ -87,6 +87,7 @@ export const MainProvider = ({ children }) => {
   const onDisconnect = () => {
     setIsConnected(false);
     setCurrentAccount(null);
+    localStorage.clear()
   };
 
   useEffect(()=>{    
@@ -110,9 +111,7 @@ export const MainProvider = ({ children }) => {
       setIsLoading(false)
       }catch(error)
       {
-        console.log("ricarica la pagina")
         window.location.reload(false);
-
       }
     }
 }
@@ -134,6 +133,7 @@ useEffect(() => {
             await loadContractCorsi(signer)
             await loadContractRecensioni(signer)
             setIsLoading(false)
+            localStorage.setItem('userAccount',currentAccount)
     } catch (err) {
         setAlertText('There was an error fetching your accounts. Make sure your Ethereum client is configured correctly.'+err.code+" "+err.message)
         setIsLoading(false)
@@ -159,13 +159,13 @@ useEffect(() => {
     loadCorsi()
   },[contractCorsi])
 
-  const loadContractCorsi = async (signer) => {
+  async function loadContractCorsi(signer){
     await (async()=>{
     const contract = new ethers.Contract(CorsiAddress, CorsiAbi, signer)
     setContractCorsi(contract)})()
   }
 
-  const loadContractDettagli = async (signer) => {
+  async function loadContractDettagli(signer){
     
     await (async()=>{
       
@@ -366,6 +366,16 @@ useEffect(()=>{
   
 },[userDetails])
 
+async function getPhotoUtente(id)
+{
+  if(Object.keys(contractUserDetails).length === 0) return;
+  let results = await contractUserDetails.getUtente(id)
+  if(!results) return "fail"
+  let dati = await fetch(`https://learningdata.infura-ipfs.io/ipfs/${results}`)
+  dati= await dati.json()
+  return dati.userDetails.img
+}
+
 
   const caricaDatiUtenteEsterno=async(id)=>{
     if(Object.keys(contractUserDetails).length === 0) return;
@@ -402,6 +412,7 @@ useEffect(()=>{
         contractUserDetails,
         loadCorsiUtente,
         corsiUtente,
+        getPhotoUtente,
         show,
         handleClose,
         loadRecensioniUtente,
@@ -421,8 +432,7 @@ useEffect(()=>{
         apriModaleRegistrazione,
         setApriModaleRegistrazione,
         setUserDetails,
-        onDisconnect
-      }}
+        onDisconnect      }}
     >
       {children}
     </MainContext.Provider>

@@ -175,7 +175,7 @@ const CreaCorso= () =>{
         setSeverity("warning")
         setCaricamento("false")
       }else{
-        const newCorso={creatore:currentAccount,titolo:titolo,prezzo:parseFloat(prezzo),durata:durata,descrizione:descrizione,img:fileDataURL,materia:materia,secondaria:secondaria,immagineProfilo:immagineProfilo,username:username};
+        const newCorso={creatore:currentAccount,titolo:titolo,prezzo:parseFloat(prezzo),durata:durata,descrizione:descrizione,img:fileDataURL,materia:materia,secondaria:secondaria,username:username};
         setCorso(newCorso)
       }
     }
@@ -229,7 +229,6 @@ const CreaCorso= () =>{
   };
 
   function renderSwitch(stepAttuale) {
-    console.log("step:",stepAttuale)
     switch(stepAttuale) {
       case 'Titolo del corso':
         return (<input  className='form-control mb-4' type="text" placeholder="titolo" value={titolo} onChange={(event) => setTitolo(event.currentTarget.value)}/>);

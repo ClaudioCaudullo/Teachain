@@ -20,7 +20,7 @@ import MiniUtente from './MiniUtente';
 import "../styles/Colors.css"
 
 const ZoomCorso = () => {
-    let {currentAccount,contractCorsi,loadCorsi,immagineProfilo}=useContext(MainContext);
+    let {currentAccount,contractCorsi,loadCorsi}=useContext(MainContext);
     const [titolo,setTitolo]=useState();
     const [prezzo,setPrezzo]=useState();
     const [durata,setDurata]=useState();
@@ -185,7 +185,7 @@ const ZoomCorso = () => {
         }
         fetchData()
 
-      })
+      },[])
 
     async function modificaCorso()
     {
@@ -197,7 +197,7 @@ const ZoomCorso = () => {
         return;
       }
       setCaricamento("true")
-    let corso={creatore:creatore,titolo:titolo,prezzo:prezzo,durata:durata,descrizione:descrizione,img:banner,materia:materia,secondaria:secondaria,immagineProfilo:immagineProfilo,username:username};
+    let corso={creatore:creatore,titolo:titolo,prezzo:prezzo,durata:durata,descrizione:descrizione,img:banner,materia:materia,secondaria:secondaria,username:username};
     let hash
     try {
         let options={
@@ -343,9 +343,6 @@ useEffect(()=>{
   setTagSecondaria(tag)
 },[secondaria])
 
-useEffect(()=>{
-  console.log("tagprimaria",tagPrimaria)
-},[tagPrimaria])
 
 
   return (
