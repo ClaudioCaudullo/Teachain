@@ -37,7 +37,7 @@ Teachain requires
 - [Node.js](https://nodejs.org/) v16+.
 - [React.js](https://it.reactjs.org/) v16.10+.
 
-##First time setup
+## First time setup
 
 ``` sh
 $ cd Teachain
