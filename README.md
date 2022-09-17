@@ -1,15 +1,15 @@
 # Teachain
 
 <p align="center">
-  <picture>
- <sourcemedia="(prefers-color-scheme: dark)"  srcset="https://i.postimg.cc/Pf1BQXJp/homepage.png">
- <img width="500" height="375" alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="https://i.postimg.cc/br49kM5j/High-Resolution-Logo-Black-Background.png">
+<picture>
+ <source width="500" height="200" media="(prefers-color-scheme: dark)"  srcset="https://i.postimg.cc/6Qs3g6Vs/teachainlogo.png">
+ <img width="500" height="375" alt="Shows logo with black blackground in white theme" src="https://i.postimg.cc/br49kM5j/High-Resolution-Logo-Black-Background.png">
 </picture>
-  <img >
 </p>
 
 ## Create your course or learn from other user's courses with Teachain!
-
+<img src="https://i.postimg.cc/Pf1BQXJp/homepage.png">
+  
 ## Technologies
 <p align="center">
     <img width="250" height="250" src="https://i.postimg.cc/6pGWwszd/reactlogo.png">
