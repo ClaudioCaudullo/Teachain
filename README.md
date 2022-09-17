@@ -63,9 +63,9 @@ After setup the environment let's jump into the core of Teachain.
   <img src="https://i.postimg.cc/RhG1NyLd/networkmeta.png">
 </p>
 
-- Take free testnet eth in platforms like https://goerlifaucet.com/ or https://goerli-faucet.mudit.blog/;
-- Press the login button on teachain (sometimes need a page refresh before do login)
-
+- Take free testnet eth in platforms like https://goerlifaucet.com/ or https://goerli-faucet.mudit.blog/ ;
+- Press the login button on teachain (sometimes need a page refresh before do login);
+- Enjoy⭐
 
 
 # Author 💻 👦
