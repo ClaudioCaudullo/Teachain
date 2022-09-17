@@ -1,13 +1,14 @@
 # Teachain
 
 <p align="center">
-  <img width="500" height="200" backgroundColor="red" src="https://i.postimg.cc/6Qs3g6Vs/teachainlogo.png">
+  <picture>
+ <sourcemedia="(prefers-color-scheme: dark)"  srcset="https://i.postimg.cc/Pf1BQXJp/homepage.png">
+ <img width="500" height="375" alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="https://i.postimg.cc/br49kM5j/High-Resolution-Logo-Black-Background.png">
+</picture>
+  <img >
 </p>
 
 ## Create your course or learn from other user's courses with Teachain!
-<p align="center">
-  <img  src="https://i.postimg.cc/Pf1BQXJp/homepage.png">
-</p>
 
 ## Technologies
 <p align="center">
@@ -21,7 +22,7 @@
 - Smart contracts: Solidity + Hardhat
 - Server only for start conference: WebRTC with use of peerJS
 
-##Features
+## Features
 - No password required, login with metamask 🦊
 - Create or buy courses to learn everything you need 📖
 - Carry out your lesson via video call 📹
