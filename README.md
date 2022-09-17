@@ -51,6 +51,19 @@ $ npm install
 
 Some package installation may fail , in this case use the command: "sudo npm install --force"
 
+## Start teachain
+
+Just the first time, you need to build the project. Do that in this way:
+- cd /teachain/client
+- npm run build
+
+Now you can run the project
+- cd .. (to go to /teachain)
+- npm start
+
+Open your browser, type localhost:5000 and press enter.
+Welcome to Teachain!
+
 ## First time usage
 
 After setup the environment let's jump into the core of Teachain.
