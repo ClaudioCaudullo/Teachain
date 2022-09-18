@@ -12,7 +12,7 @@ import Stack from '@mui/material/Stack';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import styles from "../styles/ZoomCorso.module.css"
+import styles from "../styles/ZoomCourse.module.css"
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
