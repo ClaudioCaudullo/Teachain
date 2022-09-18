@@ -20,10 +20,10 @@
   justify-content: space-between;
 }
 
-.cardTags{
-  display:flex;
+.cardTags {
+  display: flex;
   flex-wrap: wrap;
-  gap:10px;
+  gap: 10px;
 }
 
 .tag {
@@ -36,13 +36,12 @@
   text-transform: uppercase;
 }
 
-
-.cardBody>p {
+.cardBody > p {
   font-size: 13px;
 }
 
-.cardBody>h4{
-  margin-top:10px;
+.cardBody > h4 {
+  margin-top: 10px;
 }
 
 .user {
@@ -56,11 +55,11 @@
   height: 40px;
   margin-right: 10px;
 }
-img:hover{
-  cursor:pointer;
+img:hover {
+  cursor: pointer;
 }
-.userInfo>h5:hover{
-  cursor:pointer
+.userInfo > h5:hover {
+  cursor: pointer;
 }
 .userInfo h5 {
   margin: 0;

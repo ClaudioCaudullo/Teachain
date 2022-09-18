@@ -1,48 +1,42 @@
-.container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    row-gap: 30px;
-    margin-top: 10px;
-    background-color: #EDF2F4;
-    
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  margin-top: 10px;
+  background-color: #edf2f4;
 }
 
-.previewContainer{
-    display:flex;
-    flex-direction: column;
-    margin: 100px;
-
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
 }
 
-.testo{
-    color:#2B2D42;
-    text-align: center;
-    font-weight: bold;
+.testo {
+  color: #2b2d42;
+  text-align: center;
+  font-weight: bold;
 }
 
-.mainContainer>.titolo{
-    font-size: 3rem;
+.mainContainer > .titolo {
+  font-size: 3rem;
 }
 
-
-
-
-select{
-    border-color:#2B2D42;
+select {
+  border-color: #2b2d42;
 }
 
-.bottone{
-    width:20%;
-    border-color:#2B2D42;
-
+.bottone {
+  width: 20%;
+  border-color: #2b2d42;
 }
 
-.banner{
-    width:100%;
-    height:300px;
-    object-fit: cover;
-    overflow: hidden;
+.banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -82,10 +76,10 @@ select{
   min-height: 250px;
 }
 
-.cardTags{
-  display:flex;
+.cardTags {
+  display: flex;
   flex-wrap: wrap;
-  gap:10px;
+  gap: 10px;
 }
 
 .tag {
@@ -97,13 +91,13 @@ select{
   text-transform: uppercase;
 }
 
-.cardBody>p {
+.cardBody > p {
   font-size: 13px;
   margin: 0 0 40px;
 }
 
-.cardBody>h4{
-  margin-top:10px;
+.cardBody > h4 {
+  margin-top: 10px;
 }
 
 .user {
@@ -117,11 +111,11 @@ select{
   height: 40px;
   margin-right: 10px;
 }
-img:hover{
-  cursor:pointer;
+img:hover {
+  cursor: pointer;
 }
-.userInfo>h5:hover{
-  cursor:pointer
+.userInfo > h5:hover {
+  cursor: pointer;
 }
 .userInfo h5 {
   margin: 0;
@@ -129,4 +123,3 @@ img:hover{
 .userInfo small {
   color: #545d7a;
 }
-

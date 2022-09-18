@@ -20,11 +20,11 @@
   min-height: 150px;
 }
 
-.cardTags{
-  display:flex;
+.cardTags {
+  display: flex;
   flex-wrap: wrap;
-  gap:10px;
-  margin-bottom:10px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .tag {
@@ -37,8 +37,7 @@
   text-transform: uppercase;
 }
 
-
 .cardBody p {
   font-size: 13px;
-  margin: 0px ;
+  margin: 0px;
 }

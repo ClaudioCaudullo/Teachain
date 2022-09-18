@@ -1,52 +1,53 @@
-.buttonLogin{
-    color: white;
-    background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
-    border: 3px solid #dbdbdb;
-    border-radius: 10px;
-    border-width: 3px;
-    cursor: pointer;
+.buttonLogin {
+  color: white;
+  background: -webkit-linear-gradient(left, #ef3c2d, #cb1b16);
+  border: 3px solid #dbdbdb;
+  border-radius: 10px;
+  border-width: 3px;
+  cursor: pointer;
 }
 
-.buttonMetamask{
-    color: white ;
-    background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
-    background-size: 200% 200%;
-    border: 1px solid #dbdbdb;
-    border-radius: 4px;
-    border-width: 1px;
-    padding: 13px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.2em;
-    margin-right:10px;
+.buttonMetamask {
+  color: white;
+  background: -webkit-linear-gradient(left, #ef3c2d, #cb1b16);
+  background-size: 200% 200%;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  border-width: 1px;
+  padding: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-right: 10px;
 }
 
-.buttonMetamask:hover , .buttonLogin{
-    background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
-  }
-
-.container{
-    display:flex;
+.buttonMetamask:hover,
+.buttonLogin {
+  background: -webkit-linear-gradient(left, #ef3c2d, #cb1b16);
 }
 
-.container>img{
-    width:50px;
-    height:50px;
+.container {
+  display: flex;
 }
 
-.container>p{
-margin-bottom:0 !important;    
-margin-top:10px !important;
+.container > img {
+  width: 50px;
+  height: 50px;
 }
 
-.disabledLink{
-    text-decoration: none;
+.container > p {
+  margin-bottom: 0 !important;
+  margin-top: 10px !important;
 }
 
-.navbarCustom{
-    background-color:#1368AA;
+.disabledLink {
+  text-decoration: none;
 }
 
-.container>a{
-    color:#2B2D42;
+.navbarCustom {
+  background-color: #1368aa;
+}
+
+.container > a {
+  color: #2b2d42;
 }
