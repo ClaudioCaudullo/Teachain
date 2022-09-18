@@ -1,4 +1,4 @@
-.buttonAccedi{
+.buttonLogin{
     color: white;
     background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
     border: 3px solid #dbdbdb;
@@ -21,7 +21,7 @@
     margin-right:10px;
 }
 
-.buttonMetamask:hover , .buttonAccedi{
+.buttonMetamask:hover , .buttonLogin{
     background: -webkit-linear-gradient(left, #EF3C2D, #CB1B16);
   }
 
@@ -39,7 +39,7 @@ margin-bottom:0 !important;
 margin-top:10px !important;
 }
 
-.linkDisabilitato{
+.disabledLink{
     text-decoration: none;
 }
 

@@ -1,0 +1,44 @@
+body{
+    margin:0;
+}
+
+.container{
+    width:100%;
+    margin-right:10px;
+    margin-bottom: 20px;
+    height:auto;
+    display:flex;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+}
+
+.containerInfoUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left:20px;
+
+}
+
+.containerInfoUser>p:hover{
+    cursor: pointer;
+}
+
+.containerInfoUser>img{
+    width:90px;
+    height:90px;
+    object-fit: cover;
+}
+
+.containerReview{
+    margin-left: 30px;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:10px;
+    justify-content: center;
+    align-items: center;
+    
+}

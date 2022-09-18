@@ -260,10 +260,7 @@ banner>img:hover{
 }
 
 
-
-
-
-.bottoni{
+.buttons{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -271,7 +268,7 @@ banner>img:hover{
   flex-wrap:wrap;
 }
 
-.bottoniSecondari{
+.secondaryButtons{
   padding:10px;
   border: none !important;
   border-radius: 10px !important;
@@ -282,7 +279,7 @@ banner>img:hover{
   background-color: #F26A4F;
 }
 
-.bottoni>button{
+.buttons>button{
   padding:10px;
   border: none !important;
   border-radius: 10px !important;
@@ -292,16 +289,16 @@ banner>img:hover{
   margin-bottom: 10px;
 }
 
-.azzera{
+.reset{
   background-color: gray;
 }
 
-.filtra{
+.filter{
   background-color: #4091C9;
 }
 
 
-.containerMaterie{
+.containerSubject{
     display:flex;
     flex-direction: column;
     padding:0px 20px 20px 20px;
@@ -309,7 +306,7 @@ banner>img:hover{
     gap:5px;
 }
 
-.materia{
+.subject{
     display:flex;
     flex-direction: row;
     margin:0;
@@ -317,7 +314,7 @@ banner>img:hover{
     flex:1;
 }
 
-.materia>input{
+.subject>input{
     display: block !important;
     width:20px;
 }
@@ -517,11 +514,11 @@ banner>img:hover{
     }
   }
 
-  .descrizione{
+  .description{
     width:100% ;
   }
 
-  .barraDiRicerca{
+  .searchBar{
     margin-top:20px !important;
     margin-left:10% !important;
     width:80% !important;
@@ -532,7 +529,7 @@ banner>img:hover{
   @media only screen and (min-height: 600px), (min-width:600px){
 
 
-  .containerPubblicita{
+  .containerAds{
     width:100%;
     height:800px;
     display:flex;
@@ -543,7 +540,7 @@ banner>img:hover{
 
   }
 
-  .containerPubblicitaV2{
+  .containerAdsV2{
     width:100%;
     height:800px;
     display:flex;
@@ -553,7 +550,7 @@ banner>img:hover{
     gap:10px;
   }
 
-  .scrittaPubblicita{
+  .textAds{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -561,34 +558,34 @@ banner>img:hover{
     flex-wrap: wrap;
   }
 
-  .scrittaPubblicita>h2{
+  .textAds>h2{
     width:250px;
     font-weight: bold;
     }
 
-  .scrittaPubblicita>h4{
+  .textAds>h4{
     width:400px;
     font-style: italic;
 
   }
 
-  .scrittaPubblicitaV2{
+  .textAdsV2{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .scrittaPubblicitaV2>h2{
+  .textAdsV2>h2{
     font-weight: bold;
   }
 
-  .scrittaPubblicitaV2>h4{
+  .textAdsV2>h4{
     font-style: italic;
   }
 
 
-  .immaginiPubblicita{
+  .imageAds{
     display:flex;
     flex-wrap:wrap;
     align-items: center;
@@ -596,19 +593,19 @@ banner>img:hover{
     gap:10px;
   }
 
-  .immaginiPubblicita>img{
-    width:300px;
-    height:300px;
-    object-fit: cover;
-    border-radius: 20px;
+  .imageAds>img{
+    width:300px !important;
+    height:300px !important;
+    object-fit: cover !important;
+    border-radius: 20px !important;
   }
 
-  .immaginiPubblicita>img:hover{
+  .imageAds>img:hover{
     cursor: default !important;
   }
 
 
-    .immaginiPubblicitaV2{
+    .imageAdsV2{
       display:flex;
       flex-wrap:wrap;
       align-items: center;
@@ -616,14 +613,14 @@ banner>img:hover{
       gap:10px;
     }
   
-    .immaginiPubblicitaV2>img{
+    .imageAdsV2>img{
       width:500px;
       height:500px;
       object-fit: cover;
       border-radius: 20px;
     }
   
-    .immaginiPubblicitaV2>img:hover{
+    .imageAdsV2>img:hover{
       cursor: default !important;
     }
   }
@@ -631,7 +628,7 @@ banner>img:hover{
   @media only screen and (max-height: 600px), (max-width:600px) {
 
 
-  .containerPubblicita{
+  .containerAds{
     width:100%;
     height:800px;
     display:flex;
@@ -642,7 +639,7 @@ banner>img:hover{
 
   }
 
-  .containerPubblicitaV2{
+  .containerAdsV2{
     background-color: black;
     color:white;
     width:100%;
@@ -654,7 +651,7 @@ banner>img:hover{
     gap:10px;
   }
 
-  .scrittaPubblicita{
+  .textAds{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -662,33 +659,33 @@ banner>img:hover{
     flex-wrap: wrap;
   }
 
-  .scrittaPubblicita>h2{
+  .textAds>h2{
     width:250px;
     font-weight: bold;
     }
 
-  .scrittaPubblicita>h4{
+  .textAds>h4{
     width:300px;
     font-style: italic;
   }
 
-  .scrittaPubblicitaV2{
+  .textAdsV2{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .scrittaPubblicitaV2>h2{
+  .textAdsV2>h2{
     font-weight: bold;
   }
 
-  .scrittaPubblicitaV2>h4{
+  .textAdsV2>h4{
     font-style: italic;
   }
 
 
-  .immaginiPubblicita{
+  .imageAds{
     display:flex;
     flex-wrap:wrap;
     align-items: center;
@@ -696,18 +693,18 @@ banner>img:hover{
     gap:10px;
   }
 
-  .immaginiPubblicita>img{
-    width:200px;
-    height:200px;
-    object-fit: cover;
-    border-radius: 20px;
+  .imageAds>img{
+    width:200px !important;
+    height:200px !important;
+    object-fit: cover !important;
+    border-radius: 20px !important;
   }
 
-  .immaginiPubblicita>img:hover{
+  .imageAds>img:hover{
     cursor: default !important;
   }
 
-    .immaginiPubblicitaV2{
+    .imageAdsV2{
       display:flex;
       flex-wrap:wrap;
       align-items: center;
@@ -715,20 +712,20 @@ banner>img:hover{
       gap:10px;
     }
   
-    .immaginiPubblicitaV2>img{
-      width:200px;
-      height:200px;
-      object-fit: cover;
-      border-radius: 20px;
+    .imageAdsV2>img{
+      width:200px !important;
+      height:200px !important;
+      object-fit: cover !important;
+      border-radius: 20px !important;
     }
   
-    .immaginiPubblicitaV2>img:hover{
+    .imageAdsV2>img:hover{
       cursor: default !important;
     }
   }
 
   @media only screen and (max-width: 850px),(max-height: 500px) {
-    .immagineCarosello{
+    .carouselImage{
       height:500px !important;
       object-fit:fill !important;
       object-position:0 60% !important;
@@ -737,7 +734,7 @@ banner>img:hover{
 
 
   @media only screen and (min-width: 850px),(min-height: 500px) {
-    .immagineCarosello{
+    .carouselImage{
       height:500px !important;
       object-fit:cover !important;
       object-position:0 60% !important;

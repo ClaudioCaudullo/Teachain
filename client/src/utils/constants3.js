@@ -1,4 +1,4 @@
 
-import abi from './recensioni.json';
-export const RecensioniAbi=abi.abi;
-export const RecensioniAddress='0x545ebed4903c34D2736a82c7928746F90847DB5F';
+import abi from './Reviews.json';
+export const ReviewsAbi=abi.abi;
+export const ReviewsAddress='0x22799b629d3Cd7384b7Bd98Bbd6E7530e4a5CDE9';

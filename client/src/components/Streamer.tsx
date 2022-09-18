@@ -6,7 +6,7 @@ import VideocamOffRoundedIcon from '@mui/icons-material/VideocamOffRounded';
 import LogoutIcon from '@mui/icons-material/Logout';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 interface videoStreamInterface {
     stream: any,

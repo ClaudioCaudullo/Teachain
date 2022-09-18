@@ -1,0 +1,24 @@
+.miniContainerUser{
+    width:120px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.miniContainerUser>img{
+    width:100px;
+    height:100px;
+    object-fit: contain;
+}
+
+.miniContainerUser>p{
+    font-size: 15px;
+}
+
+.miniContainerUser>p:hover{
+cursor: pointer;
+}

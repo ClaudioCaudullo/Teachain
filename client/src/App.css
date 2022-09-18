@@ -307,10 +307,3 @@ video{
 .screen-share svg{
   margin-left: 15px;
 }
-
-.coloreCustom{
-  background:-webkit-linear-gradient(left, #EF3C2D, #CA1B16) ;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-}

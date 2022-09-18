@@ -98,7 +98,7 @@
     }
   }
 
-.containerProfilo{
+.containerProfile{
     position:fixed;
     top:0;
     left:0;
@@ -113,7 +113,7 @@
 }
 
 
-.caricamento{
+.loader{
 
     width:300px;
     height:300px;

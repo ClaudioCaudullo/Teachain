@@ -30,14 +30,14 @@
     gap:30px;
 }
 
-.titolo{
+.title{
     font-size: 1.875rem;
     text-align: center;
     font-weight: bold;
 }
 
 
-.descrizione{
+.description{
     font-size:1.25rem;
     font-weight: normal !important;
 }
@@ -50,7 +50,7 @@ font-size:1.875rem;
 
 }
 
-.buttonCompra{
+.buttonBuy{
     background-color: #EF233C !important;
     width: auto !important;
     padding:10px;
@@ -62,42 +62,24 @@ font-size:1.875rem;
 
 }
 
-.riga{
+.row{
     display: flex;
     align-items: center;
     justify-content: center;
     gap:10px;
 }
 
-.riga>p{
+.row>p{
 margin-bottom:24px !important;
 }
 
-.prezzo{
-    min-width:300px !important;
-    max-width: 33% !important;
-
-}
-
-.materia{
-    max-width: 33%;
-    min-width:150px;
-    color:white !important; 
-}
-
-.secondaria {
-    max-width: 33%;
-    min-width:150px;
-    color:white !important; 
-
-}
 
 .rounded{
     border:none;
     border-radius:30px !important;
 }
 
-.btnModifica{
+.btnModify{
     background-color: #4091C9 !important;
     padding:10px;
     border: none !important;
@@ -107,7 +89,7 @@ margin-bottom:24px !important;
     align-self: center;
 }
 
-.btnElimina{
+.btnDelete{
     background-color: #EF233C !important;
     padding:10px;
     border: none !important;
@@ -117,38 +99,24 @@ margin-bottom:24px !important;
     align-self: center;
 }
 
-.btnConfermaModifica{
+.btnConfirmModify{
     background-color: #4091C9 !important;
     color:#EDF2F4;
 }
 
-.btnConfermaElimina{
+.btnConfirmDelete{
     background-color: #EF233C !important;
     color:#EDF2F4;
 
 }
 
-.durata{
-    max-width: 300px !important;
-    min-width: 150px !important;
 
-}
-
-.creatore{
-    max-width: 300px !important;
-    min-width: 150px!important;
-}
-
-.creatore:hover{
-    cursor: pointer;
-}
-
-.containerAcquirenti{
+.containerBuyers{
     display:flex;
     flex-wrap:wrap;
 }
 
-.bottoniSecondari{
+.buttonSecondary{
     padding:10px;
     border: none !important;
     border-radius: 10px !important;
@@ -164,7 +132,7 @@ margin-bottom:24px !important;
 
   }
 
-  .bottoni{
+  .buttons{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -179,7 +147,7 @@ margin-bottom:24px !important;
 
   }
 
-  .btnSpettatore{
+  .btnSpectator{
     background-color: #4091C9 !important;
     padding:10px;
     border: none !important;

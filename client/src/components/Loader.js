@@ -1,11 +1,10 @@
-import React from 'react'
 import styles from "../styles/Loader.module.css"
 
-const Loader = ({chiamante}) => {
+const Loader = ({caller}) => {
   return (
     <>
-    {chiamante && chiamante!="profilo"?( <div className={`${styles.container} ${styles.loading03} ${styles.loading}`}>
-        <img src={require("../images/provacaricamento2.gif")} className={styles.caricamento}/>
+    {caller && caller!="profilo"?( <div className={`${styles.container} ${styles.loading03} ${styles.loading}`}>
+        <img src={require("../images/provacaricamento2.gif")} className={styles.loader}/>
         <div>
           <span>I</span>
           <span>N</span>
@@ -33,7 +32,7 @@ const Loader = ({chiamante}) => {
           <span>.</span>
         </div>
     </div>):(<><div className={`${styles.container} ${styles.loading03} ${styles.loading}`}>
-        <img src={require("../images/provacaricamento2.gif")} className={styles.caricamento}/>
+        <img src={require("../images/provacaricamento2.gif")} className={styles.loader}/>
         <div>
         <span>C</span>
         <span>A</span>

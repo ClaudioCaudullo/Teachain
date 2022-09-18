@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -17,7 +16,6 @@ import styles from "../styles/Main.module.css"
 const Main:React.FC = () => {
   const [open, setOpen] = useState(false);
   const [existOpen, setExistOpen] = useState(false);
-
   const [createRoomInput, setCreateRoomInput] = useState('');
   const [joinRoomInput, setJoinRoomInput] = useState('');
   const [fullName, setFullName] = useState('');
@@ -86,21 +84,21 @@ const Main:React.FC = () => {
           <Grid container className={styles.grid}>
             <Grid item>
               <Button variant="contained" color="primary" onClick={handleNewClickOpen}>
-                Create new conference
+                Crea una nuova conferenza
               </Button>
               <Dialog open={open} onClose={handleNewClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Create the conference</DialogTitle>
+                <DialogTitle id="form-dialog-title">Creazione della conference</DialogTitle>
                 <form onSubmit={createNewConference}>
                   <DialogContent>
                     <DialogContentText>
-                      To create new conference, enter Full Name, Unique ID, or generate new one from the button below
+                      Per creare una nuova conferenza, inserisci il tuo nome, un ID a piacere (puoi generarlo dal bottone in basso)
                     </DialogContentText>
                     
                     <TextField
                       autoFocus
                       margin="dense"
                       id="new-room"
-                      label="Room ID"
+                      label="ID della stanza"
                       type="text"
                       value={createRoomInput}
                       onChange={(e) => setCreateRoomInput(e.target.value)}
@@ -110,7 +108,7 @@ const Main:React.FC = () => {
                       autoFocus
                       margin="dense"
                       id="full-name"
-                      label="Full Name"
+                      label="Nome"
                       type="text"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
@@ -119,13 +117,13 @@ const Main:React.FC = () => {
                   </DialogContent>
                   <DialogActions>
                     <Button onClick={handleNewClose} color="primary">
-                      Cancel
+                      Cancella
                     </Button>
                     <Button onClick={generateID} color="primary">
-                      Generate ID
+                      Genera ID
                     </Button>
                     <Button type="submit" onClick={createNewConference} color="primary">
-                      Start new conference
+                      Inizia la conferenza
                     </Button>
                   </DialogActions>
                 </form>
@@ -133,20 +131,20 @@ const Main:React.FC = () => {
             </Grid>
             <Grid item>
               <Button variant="contained" color="primary" onClick={handleExistClickOpen}>
-                Join the conference
+                Entra in una conferenza
               </Button>
               <Dialog open={existOpen} onClose={handleExistClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Join the conference</DialogTitle>
+                <DialogTitle id="form-dialog-title">Entra in una conferenza</DialogTitle>
                 <form onSubmit={joinConference}>
                   <DialogContent>
                     <DialogContentText>
-                      Please Enter conversation room ID and Full Name to join.
+                      Inserisci l'id della stanza e il tuo nome per entrare.
                     </DialogContentText>
                     <TextField
                       autoFocus
                       margin="dense"
                       id="exist-room"
-                      label="Room ID"
+                      label="ID della stanza"
                       type="text"
                       value={joinRoomInput}
                       onChange={(e) => setJoinRoomInput(e.target.value)}
@@ -156,7 +154,7 @@ const Main:React.FC = () => {
                       autoFocus
                       margin="dense"
                       id="full-name-2"
-                      label="Full Name"
+                      label="Nome"
                       type="text"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
@@ -165,10 +163,10 @@ const Main:React.FC = () => {
                   </DialogContent>
                   <DialogActions>
                     <Button onClick={handleExistClose} color="primary">
-                      Cancel
+                      Cancella
                     </Button>
                     <Button type="submit" onClick={joinConference} color="primary">
-                      Join conference
+                      Entra in conferenza
                     </Button>
                   </DialogActions>
                 </form>

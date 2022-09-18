@@ -46,7 +46,6 @@ io.on("connection", (socket) => {
   }catch(error){
     console.log("errore nal socket leave",error)
   }
-    //io.to(roomID).emit("userLeft","na stringa  aminchia", peerID);
   });
 
   socket.on("new message", (data, roomID) => {
@@ -69,17 +68,11 @@ io.on("connection", (socket) => {
   });
 });
 
-// app.get("/", (req, res) => {
-//   res.send("Welcome to the Fast Connect Backend ;)");
-// });
-
 app.use("/mypeer", ExpressPeerServer(server, options));
 
-// if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
-// }
 
 server.listen(port);

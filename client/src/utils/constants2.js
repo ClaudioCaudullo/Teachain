@@ -1,4 +1,4 @@
 
 import abi from './UserDetails.json';
 export const UserDetailsAbi=abi.abi;
-export const UserDetailsAddress='0xd0332A0107d47776063114f0FDA25A8Dffca1a37';
+export const UserDetailsAddress='0x76029B19a83BB0672A27CD4E4922dCB9a5b38664';
