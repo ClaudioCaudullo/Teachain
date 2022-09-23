@@ -96,7 +96,7 @@ const Main: React.FC = () => {
                       aria-labelledby="form-dialog-title"
                     >
                       <DialogTitle id="form-dialog-title">
-                        Creazione della conference
+                        Creazione della conferenza
                       </DialogTitle>
                       <form onSubmit={createNewConference}>
                         <DialogContent>

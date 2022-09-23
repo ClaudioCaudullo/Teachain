@@ -87,9 +87,10 @@ const CoursesPurchased = () => {
     <>
       <container>
         {isLoading == true ? <Loader chiamante="home" /> : <></>}
-
+        <div style={{marginTop:"10px",width:"100%",display:"flex",placeContent:"center"}}><h1>Lista dei corsi che hai &nbsp;</h1> <h1 style={{color:"#ef3c2d"}}>acquistato</h1></div>
         <input
           className={styles.searchBar}
+          style={{marginBottom:"10px"}}
           type="text"
           placeholder="inserisci un titolo,nome utente,descrizione"
           value={key}

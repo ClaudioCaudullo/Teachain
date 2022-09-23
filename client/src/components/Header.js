@@ -153,15 +153,14 @@ const Header = () => {
               keyboard={false}
             >
               <Modal.Header closeButton>
-                <Modal.Title>No Metamask Detected</Modal.Title>
+                <Modal.Title>Metamask non rilevato</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                Non-Ethereum browser detected. You should consider trying
-                MetaMask!
+                Non abbiamo rilevato metamask, per favore installa l'estensione per poi procedere!
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={() => setShow(false)}>
-                  Close
+                  Chiudi
                 </Button>
                 <Button variant="info" onClick={() => setShow(false)}>
                   <a
@@ -169,7 +168,7 @@ const Header = () => {
                     href="https://metamask.io/download/"
                     target="_blank"
                   >
-                    GO download!
+                    Vai a scaricare!
                   </a>
                 </Button>
               </Modal.Footer>

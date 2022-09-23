@@ -1466,10 +1466,11 @@ const Profile = () => {
                             ></button>
                           </div>
                           <div class="modal-body bodyModal">
+                          {event?( 
                             <p>
-                              Sei sicuro di voler prenotare questo slot{" "}
-                              {`${event.start}`} to {`${event.end}`} ?
-                            </p>
+                              Sei sicuro di voler prenotare questo slot{" "} {`${(new Date(event.start)).toLocaleString("en-US", {timeZone: "America/New_York"})}`} e finisce il {`${(new Date(event.end)).toLocaleString("en-US", {timeZone: "America/New_York"})}`} ?
+                            </p>):(<></>)
+                            }
                           </div>
                           <div class="modal-footer">
                             <button
@@ -1524,10 +1525,12 @@ const Profile = () => {
                             ></button>
                           </div>
                           <div class="modal-body bodyModal">
+                          {event?( 
                             <p>
-                              Sei sicuro di voler rimuove la prenotazione allo
-                              slot {`${event.start}`} to {`${event.end}`} ?
-                            </p>
+                              Sei sicuro di voler rimuovere la prenotazione allo
+                              slot che inizia il {`${(new Date(event.start)).toLocaleString("en-US", {timeZone: "America/New_York"})}`} e finisce il {`${(new Date(event.end)).toLocaleString("en-US", {timeZone: "America/New_York"})}`} ?
+                            </p>):(<></>)
+                            }
                           </div>
                           <div class="modal-footer">
                             <button
@@ -1572,7 +1575,7 @@ const Profile = () => {
                               className="modal-title"
                               id="staticBackdropLabel"
                             >
-                              Rimozione prenotazione
+                              Rimozione disponibilità
                             </h5>
                             <button
                               type="button"
@@ -1582,10 +1585,12 @@ const Profile = () => {
                             ></button>
                           </div>
                           <div class="modal-body bodyModal">
+                            {event?( 
                             <p>
-                              Sei sicuro di voler rimuove la disponibilità allo
-                              slot {`${event.start}`} to {`${event.end}`} ?
-                            </p>
+                              Sei sicuro di voler rimuovere la disponibilità allo
+                              slot che inizia il {`${(new Date(event.start)).toLocaleString("en-US", {timeZone: "America/New_York"})}`} e finisce il {`${(new Date(event.end)).toLocaleString("en-US", {timeZone: "America/New_York"})}`} ?
+                            </p>):(<></>)
+                            }
                           </div>
                           <div class="modal-footer">
                             <button
@@ -1618,6 +1623,7 @@ const Profile = () => {
                           <Accordion.Collapse eventKey="0">
                             <Card.Body>
                               <div className="containerDate">
+                                <p>Da</p>
                                 <DatePicker
                                   wrapperClassName="datePickerCustom"
                                   selected={startDate}
@@ -1634,7 +1640,7 @@ const Profile = () => {
                                   timeCaption="time"
                                   dateFormat="dd, yyyy h:mm aa"
                                 />
-                                <p>to</p>
+                                <p>fino a</p>
                                 <DatePicker
                                   selected={endDate}
                                   wrapperClassName="datePickerCustom"
@@ -1667,7 +1673,7 @@ const Profile = () => {
                                     <>
                                       <tr>
                                         <td>
-                                          <p>From: {`${data.start}`}</p>
+                                          <p>Da: {`${data.start.toLocaleString("en-US", {timeZone: "America/New_York"})}`}</p>
                                         </td>
                                         <td rowSpan={2}>
                                           <button
@@ -1679,7 +1685,7 @@ const Profile = () => {
                                       </tr>
                                       <tr>
                                         <td>
-                                          <p>To: {`${data.start}`}</p>
+                                          <p>A: {`${data.end.toLocaleString("en-US", {timeZone: "America/New_York"})}`}</p>
                                         </td>
                                       </tr>
                                     </>

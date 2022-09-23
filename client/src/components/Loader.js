@@ -8,7 +8,7 @@ const Loader = ({ caller }) => {
           className={`${styles.container} ${styles.loading03} ${styles.loading}`}
         >
           <img
-            src={require("../images/provacaricamento2.gif")}
+            src={require("../images/loading.gif")}
             className={styles.loader}
           />
           <div>
@@ -44,7 +44,7 @@ const Loader = ({ caller }) => {
             className={`${styles.container} ${styles.loading03} ${styles.loading}`}
           >
             <img
-              src={require("../images/provacaricamento2.gif")}
+              src={require("../images/loading.gif")}
               className={styles.loader}
             />
             <div>

@@ -484,41 +484,26 @@ const Home = () => {
               <Carousel.Item>
                 <img
                   className={`d-block w-100 h-10 ${styles.carouselImage}`}
-                  src={require("../images/prova2.jpg")}
+                  src={require("../images/carosello1.jpg")}
                   alt="First slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className={`d-block w-100 h-10 ${styles.carouselImage}`}
-                  src={require("../images/prova3.jpg")}
+                  src={require("../images/carosello2.jpg")}
                   alt="Second slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className={`d-block w-100 h-10 ${styles.carouselImage}`}
-                  src={require("../images/prova4.png")}
+                  src={require("../images/carosello3.png")}
                   alt="Third slide"
                 />
               </Carousel.Item>
             </Carousel>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexFlow: "column",
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                zIndex: 2,
-                height: "140px",
-                padding: "18px",
-                background:
-                  "linear-gradient(180deg, rgba(3,50,112,0) -60%, rgba(0,0,0,1) 141%)",
-              }}
-            >
+            <div className={styles.containerSearchBar}>
               <h3 style={{ color: "white", fontWeight: "bold" }}>
                 Cerca tra i corsi
               </h3>
